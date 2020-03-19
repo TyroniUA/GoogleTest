@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css'
 import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
-import firebase from './Firebase.js';
+import firebase from '../src/FireBase/Firebase.js';
 import { getLatLng, geocodeByAddress } from 'react-google-places-autocomplete/dist/utils/googleGeocodesHelper';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import GoogleMapReact from 'google-map-react';
@@ -55,13 +55,6 @@ class App extends React.Component {
     }
   }
 
-  //отключить уведомление
-  disableAlert = () => {
-    console.log('disable start')
-    this.setState({
-      display: 'hidden'
-    })
-  }
 
   //достать данные по длине и широте
   getData = () => {
